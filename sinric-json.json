@@ -1,0 +1,151 @@
+{
+    "success": true,
+    "device": {
+      "equalizer": {
+        "bands": []
+      },
+      "energyUsageEstimation": {
+        "enabled": false,
+        "type": "POWER"
+      },
+      "stats": {
+        "messages": {
+          "sentCount": 0,
+          "receivedCount": 0
+        },
+        "connection": {
+          "connectedCount": 0,
+          "disconnectedCount": 0
+        }
+      },
+      "timers": {
+        "autoOnOff": {
+          "on": false,
+          "onInterval": 5,
+          "off": false,
+          "offInterval": 5
+        }
+      },
+      "notifications": {
+        "turned": {
+          "whenOn": true,
+          "whenOff": false
+        },
+        "connection": {
+          "whenConnected": false,
+          "whenDisconnected": true
+        },
+        "alert": {
+          "enabled": true
+        }
+      },
+      "name": "MCV",
+      "alias": [],
+      "description": "main mcv",
+      "accessKey": "62b31df20aec232058edfe53",
+      "product": {
+        "alexa": {
+          "displayCategories": [
+            "SMARTPLUG"
+          ],
+          "capabilities": [
+            {
+              "type": "AlexaInterface",
+              "interface": "Alexa",
+              "version": "3"
+            },
+            {
+              "type": "AlexaInterface",
+              "interface": "Alexa.EndpointHealth",
+              "version": "3",
+              "properties": {
+                "supported": [
+                  {
+                    "name": "connectivity"
+                  }
+                ],
+                "proactivelyReported": true,
+                "retrievable": true
+              }
+            },
+            {
+              "type": "AlexaInterface",
+              "interface": "Alexa.PowerController",
+              "version": "3",
+              "properties": {
+                "supported": [
+                  {
+                    "name": "powerState"
+                  }
+                ],
+                "proactivelyReported": true,
+                "retrievable": true
+              }
+            }
+          ]
+        },
+        "googleHome": {
+          "deviceType": "action.devices.types.SWITCH",
+          "deviceTraits": [
+            "action.devices.traits.OnOff"
+          ],
+          "deviceAttributes": ""
+        },
+        "smartThings": {
+          "deviceHandlerType": "c2c-switch",
+          "categories": [
+            "switch"
+          ]
+        },
+        "active": true,
+        "attributes": [
+          {
+            "name": "isSensor",
+            "values": false
+          }
+        ],
+        "deviceManualSetupInstructions": [
+          "Step1",
+          "Step2"
+        ],
+        "name": "Switch",
+        "manufacturer": "5c67c495268198273c8551cd",
+        "model": "SR2",
+        "shortDescription": "SinricPro smart socket that can be turned on and off using Alexa",
+        "description": "SinricPro smart socket that can be turned on and off using Alexa",
+        "hwVersion": "1.0.0",
+        "swVersion": "1.0.0",
+        "code": "sinric.devices.types.SWITCH",
+        "actions": [
+          "setPowerState"
+        ],
+        "events": [
+          "setPowerState"
+        ],
+        "customType": false,
+        "customData": "your custom data goes here",
+        "createdAt": "2019-02-16T08:07:48.786Z",
+        "updatedAt": "2019-02-16T08:07:48.786Z",
+        "supportedModes": [],
+        "id": "5c67c4d4268198273c8551d0"
+      },
+      "room": {
+        "home": "62b31df20aec232058edfe55",
+        "name": "Living Room",
+        "description": "",
+        "user": "62b31df20aec232058edfe49",
+        "createdAt": "2022-06-22T13:49:38.557Z",
+        "updatedAt": "2022-06-22T13:49:38.557Z",
+        "id": "62b31df20aec232058edfe57"
+      },
+      "deactivated": false,
+      "attributes": [],
+      "powerState": "Off",
+      "isOnline": false,
+      "payloadFormat": "json",
+      "transportProtocol": "ws",
+      "createdAt": "2022-06-22T13:56:10.544Z",
+      "updatedAt": "2022-06-22T13:56:10.544Z",
+      "id": "62b31f7a0aec232058ee0018"
+    }
+  }
