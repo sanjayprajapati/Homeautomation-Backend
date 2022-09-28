@@ -12,7 +12,7 @@ function isJson(str) {
 exports.serverUpgrade = async (server, wss) => {
   server.on("upgrade", async function upgrade(request, socket, head) {
     try {
-      //console.log("request >>>>>>>>>>>>", request.headers.host);
+      console.log("request >>>>>>>>>>>>", request.headers);
       if (request.headers.host != "origin8solutions.com:5001") {
         let { appkey, deviceids, cookie, token } = request.headers;
 
