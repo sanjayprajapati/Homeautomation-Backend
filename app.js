@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
-app.use(express.static(path.join(__dirname + "/client/build")));
+//app.use(express.static(path.join(__dirname + "/client/build")));
 // importing routes
 const admin = require("./routes/adminRoutes");
 const user = require("./routes/userRoutes");
@@ -40,7 +40,8 @@ app.get("/testing", function (req, res) {
 
 app.get("/*", (req, res) => {
   console.log("hit", req.headers.host);
-  app.use(express.static(path.join(__dirname + "/client/build")));
+  //app.use(express.static(path.join(__dirname + "/client/build")));
+  res.send("Server Working");
 });
 
 // heartBeat function

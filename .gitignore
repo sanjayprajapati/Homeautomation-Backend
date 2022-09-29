@@ -35,6 +35,7 @@ local.properties
 node_modules
 config/config.env
 downloads/
+dump/
 
 node_modules/
 npm-debug.log

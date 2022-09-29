@@ -12,8 +12,8 @@ function isJson(str) {
 exports.serverUpgrade = async (server, wss) => {
   server.on("upgrade", async function upgrade(request, socket, head) {
     try {
-      console.log("request >>>>>>>>>>>>", request.headers);
-      if (request.headers.host != "origin8solutions.com:5001") {
+      console.log("request >>>>>>>>>>>>", request.url);
+      if (request.url != "/wsapp") {
         let { appkey, deviceids, cookie, token } = request.headers;
 
         //console.log("upgrading", appkey, token);
