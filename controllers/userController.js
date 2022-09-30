@@ -46,7 +46,7 @@ exports.userRegister = catchAsyncErrors(async (req, res, next) => {
     lowerCaseAlphabets: false,
     specialChars: false,
   });
-  console.log(otp);
+  console.log("otp generated", otp);
   const verificationOtpToken = new Otp({
     owner: user._id,
     token: otp,
