@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"roomname":{"$numberInt":"1"},"userId":{"$numberInt":"1"}},"name":"roomname_1_userId_1","background":true,"unique":true}],"uuid":"aaa4e9651fd64c74925b9ea1c66fad26","collectionName":"userrooms","type":"collection"}
