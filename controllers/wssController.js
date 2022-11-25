@@ -24,7 +24,7 @@ exports.wssConnect = (wss) => {
             }
           }
 
-          //console.log(d);
+          //console.log("days:", d);
 
           let payload = {
             header: {
@@ -52,17 +52,32 @@ exports.wssConnect = (wss) => {
           let mnt = Math.floor((item.time - hrs * 3600) / 60);
           //console.log(hrs, mnt);
           //new Date(new Date().toUTCString());
+          var ddays;
+          if (d.length == 0) {
+            ddays = [0, 1, 2, 3, 4, 5, 6];
+          } else {
+            ddays = [...d];
+          }
 
+          console.log("days:", ddays);
           var rule = new schedule.RecurrenceRule();
           rule.tz = "Asia/Kolkata";
-          rule.dayOfWeek = d;
+          rule.dayOfWeek = ddays;
           rule.hour = hrs;
           rule.minute = mnt;
           rule.second = 0;
 
           //console.log(rule);
           if (!schedule.scheduledJobs[scheduleId]) {
-            schedule.scheduleJob(scheduleId, rule, function () {
+            const rule_ = new schedule.RecurrenceRule();
+            rule_.hour = 15;
+            rule_.minute = 12;
+            rule_.tz = "Asia/Kolkata";
+
+            // const job11 = schedule.scheduleJob(scheduleId, rule, function () {
+            //   console.log("A new day has begun in the UTC timezone!");
+            // });
+            const subJob = schedule.scheduleJob(scheduleId, rule, function () {
               console.log("jaiho");
               wss.clients.forEach((client) => {
                 if (
